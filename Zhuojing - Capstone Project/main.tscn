@@ -1,0 +1,198 @@
+[gd_scene load_steps=17 format=3 uid="uid://b03n2klidrjwp"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_x60br"]
+[ext_resource type="PackedScene" uid="uid://2psap7d460oe" path="res://playground/scene.gltf" id="3_k3jyw"]
+[ext_resource type="PackedScene" uid="uid://dxulntuak2yge" path="res://school/scene.gltf" id="4_veejs"]
+[ext_resource type="PackedScene" uid="uid://bo1pn4qdk3rt" path="res://scifi_corridor_kitbash/scene.gltf" id="5_a6p5s"]
+[ext_resource type="PackedScene" uid="uid://bkx8au4oqpps4" path="res://living_room (1)/scene.gltf" id="5_ac18y"]
+[ext_resource type="AudioStream" uid="uid://ue4vvpmd72eh" path="res://cutting-board-chops-scrapes-61998.mp3" id="6_a43su"]
+[ext_resource type="AudioStream" uid="uid://d3q8j0pji6pao" path="res://playground-7156.mp3" id="7_1x8fq"]
+[ext_resource type="PackedScene" uid="uid://bedmjq6ti0g6s" path="res://classroom/scene.gltf" id="7_qbefy"]
+[ext_resource type="AudioStream" uid="uid://8n0kuybwpi82" path="res://swings-73973.mp3" id="8_teasn"]
+[ext_resource type="AudioStream" uid="uid://cgf28km0uoff8" path="res://school-bell-37445.mp3" id="9_gdoai"]
+[ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="11_m4ln4"]
+[ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="12_43u7g"]
+[ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="13_sfyf6"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3mk8c"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_2s8bm"]
+sky_material = SubResource("ProceduralSkyMaterial_3mk8c")
+
+[sub_resource type="Environment" id="Environment_5fxkw"]
+background_mode = 2
+sky = SubResource("Sky_2s8bm")
+tonemap_mode = 2
+
+[node name="Main" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.381847, 0)
+script = ExtResource("1_x60br")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_5fxkw")
+
+[node name="Sketchfab_Scene4" parent="." instance=ExtResource("5_a6p5s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.583, 2.08165e-12, 36.916)
+
+[node name="Sketchfab_Scene6" parent="." instance=ExtResource("7_qbefy")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 28.638, -3.47586, 46.704)
+
+[node name="Sketchfab_Scene7" parent="." instance=ExtResource("3_k3jyw")]
+transform = Transform3D(-0.0156026, 0, 0.999878, 0, 1, 0, -0.999878, 0, -0.0156026, -21.424, 0.267812, 13.0588)
+
+[node name="Sketchfab_Scene8" parent="." instance=ExtResource("4_veejs")]
+transform = Transform3D(-3.57788e-05, 0, 0.00499987, 0, 0.005, 0, -0.00499987, 0, -3.57788e-05, -0.0226707, 0.249496, 54.9404)
+
+[node name="Sketchfab_Scene5" parent="." instance=ExtResource("5_ac18y")]
+transform = Transform3D(5.30591e-05, 0, -0.0199999, 0, 0.02, 0, 0.0199999, 0, 5.30591e-05, -22.1014, -0.58706, 48.9175)
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="."]
+transform = Transform3D(1, -1.04636e-15, 3.48787e-16, -3.48787e-16, -4.37114e-08, 1, -1.04636e-15, -1, -4.37114e-08, -19.7935, 3.27557, 36.1489)
+light_energy = 100.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.535
+light_size = 1.0
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="."]
+transform = Transform3D(1, -1.04636e-15, 3.48787e-16, -3.48787e-16, -4.37114e-08, 1, -1.04636e-15, -1, -4.37114e-08, -9.67235, 4.63036, 15.1028)
+light_energy = 100.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.535
+light_size = 1.0
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 1.74846e-07, -3.82137e-15, -3.82137e-15, 4.37114e-08, 1, 1.74846e-07, -1, 4.37114e-08, 13.0195, 4.16571, 52.5987)
+light_energy = 100.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.535
+light_size = 1.0
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 1.74846e-07, -3.82137e-15, -3.82137e-15, 4.37114e-08, 1, 1.74846e-07, -1, 4.37114e-08, 12.1989, 4.37942, 20.0298)
+light_energy = 100.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.535
+light_size = 1.0
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="SpotLight3D6"]
+transform = Transform3D(1, 1.74846e-07, 1.74846e-07, 1.74846e-07, -1, 8.74228e-08, 1.74846e-07, -8.74227e-08, -1, 21.7044, -33.7756, -2.37316)
+light_energy = 1000.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.535
+light_size = 1.0
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="SpotLight3D6"]
+transform = Transform3D(1, 1.74846e-07, 1.74846e-07, 1.74846e-07, -1, 8.74228e-08, 1.74846e-07, -8.74227e-08, -1, 12.7741, -22.5781, -3.44321)
+light_energy = 1000.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.535
+light_size = 1.0
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="SpotLight3D6"]
+transform = Transform3D(1, 1.74846e-07, 0, 0, 4.37114e-08, 1, 1.74846e-07, -1, 4.37114e-08, 22.5921, -22.4378, -3.39183)
+light_energy = 1000.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.535
+light_size = 1.0
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="SpotLight3D6"]
+transform = Transform3D(1, 1.74846e-07, 0, 0, 4.37114e-08, 1, 1.74846e-07, -1, 4.37114e-08, 12.1989, -33.5438, -3.25791)
+light_energy = 1000.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.535
+light_size = 1.0
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 1.74846e-07, -3.82137e-15, -3.82137e-15, 4.37114e-08, 1, 1.74846e-07, -1, 4.37114e-08, 12.3352, 3.93807, 36.8942)
+light_energy = 100.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.535
+light_size = 1.0
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(1, -6.97574e-16, -1.5246e-23, -1.5246e-23, -4.37114e-08, 1, -6.97574e-16, -1, -4.37114e-08, -9.78103, 3.63818, 39.4796)
+light_energy = 100.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.535
+light_size = 1.0
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="SpotLight3D2"]
+transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, 0, -3.48787e-16, 0, 1, -6.4793, -12.733, -0.478073)
+light_energy = 100.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.535
+light_size = 1.0
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, -6.97574e-16, -1.5246e-23, -1.5246e-23, -4.37114e-08, 1, -6.97574e-16, -1, -4.37114e-08, -9.28272, 3.67084, 26.1455)
+light_energy = 100.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.535
+light_size = 1.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31882, 25.0331, 42.6928)
+light_energy = 50.0
+
+[node name="Cutting" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.9714, 1.22162, 53.6215)
+stream = ExtResource("6_a43su")
+volume_db = -10.0
+unit_size = 0.3
+max_db = 0.01
+autoplay = true
+attenuation_filter_db = -20.0
+
+[node name="Playground" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.181, 2.22089, 38.7393)
+stream = ExtResource("7_1x8fq")
+volume_db = -10.0
+unit_size = 0.3
+max_db = 0.01
+autoplay = true
+
+[node name="Swing" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, -2.76435e-24, -3.0564e-16, 2.76435e-24, 1, 5.09214e-24, 3.0564e-16, -5.09214e-24, 1, -21.647, 2.15192, 17.5862)
+stream = ExtResource("8_teasn")
+volume_db = -10.0
+unit_size = 0.3
+max_db = 0.01
+autoplay = true
+panning_strength = 0.69
+
+[node name="School Bell" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.5878, 2.60978, 51.9219)
+stream = ExtResource("9_gdoai")
+volume_db = -10.0
+unit_size = 0.3
+max_db = 0.01
+autoplay = true
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="Right" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.50331, 0.150575, 32.3917)
+tracker = &"right_hand"
+
+[node name="MovementTurn" parent="XROrigin3D/Right" instance=ExtResource("11_m4ln4")]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="XROrigin3D/Right"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.835927, 0.44838, 1.47182)
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="Left" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.467, 0.684108, 33.9648)
+tracker = &"left_hand"
+
+[node name="MovementDirect" parent="XROrigin3D/Left" instance=ExtResource("12_43u7g")]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="XROrigin3D/Left"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0607681, -0.192118, -0.434113)
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.52115, 1.32521, 33.0136)
+
+[node name="StartXR" parent="." instance=ExtResource("13_sfyf6")]

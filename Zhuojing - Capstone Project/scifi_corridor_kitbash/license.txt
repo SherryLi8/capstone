@@ -1,0 +1,11 @@
+Model Information:
+* title:	SciFi Corridor Kitbash
+* source:	https://sketchfab.com/3d-models/scifi-corridor-kitbash-6d8279b4bb6a4e3c8288cf71e40b6207
+* author:	Polsaris (https://sketchfab.com/polsaris)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "SciFi Corridor Kitbash" (https://sketchfab.com/3d-models/scifi-corridor-kitbash-6d8279b4bb6a4e3c8288cf71e40b6207) by Polsaris (https://sketchfab.com/polsaris) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
